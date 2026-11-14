@@ -133,9 +133,9 @@ function setupRound() {
   const slate = bots.bots.filter((b) => b.team === 'slate');
   const toTarget = targetSite === 'A' ? ['toA', 'toAMid'] : ['toB', 'toBMid'];
   const toOther = other === 'A' ? ['toA', 'toAMid'] : ['toB', 'toBMid'];
-  bots.setRoute(ember[0], toTarget[Math.floor(random() * 2)]);
-  bots.setRoute(ember[1], toOther[Math.floor(random() * 2)]);
-  bots.setRoute(ember[2], toTarget[Math.floor(random() * 2)]);
+  bots.setRoute(ember[0], world.routes[toTarget[Math.floor(random() * 2)]]);
+  bots.setRoute(ember[1], world.routes[toOther[Math.floor(random() * 2)]]);
+  bots.setRoute(ember[2], world.routes[toTarget[Math.floor(random() * 2)]]);
   bots.setRoute(ember[3], ['emberSpawn', 'midWest']);
   bots.setRoute(slate[0], ['slateSpawn', 'northLane', 'siteAApproach', 'siteA']);
   bots.setRoute(slate[1], ['slateSpawn', 'southLane', 'siteBApproach', 'siteB']);
