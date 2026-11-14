@@ -588,9 +588,9 @@ function runShot(name) {
   match.state.phase = 'live';
   match.state.phaseTime = 100;
   if (name === 'start') {
-    player.state.position.set(-22, 0, 6);
-    player.state.yaw = -Math.PI / 2.4;
-    player.state.pitch = 0.02;
+    player.state.position.set(-23, 0, 0);
+    player.state.yaw = -Math.PI / 2;
+    player.state.pitch = 0.01;
     hud.showOverlay('start', '');
     syncCamera();
     paintTwiceThenReady();

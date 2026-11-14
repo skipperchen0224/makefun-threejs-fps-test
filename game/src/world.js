@@ -53,7 +53,7 @@ export function createWorld(scene) {
   box(8.6, 1.6, 0.6, 0, 4.2, 8, materials.surface);
   // Furnace block in the middle of mid: the map's centrepiece, climbable sightline.
   box(3.2, 3.4, 3.2, 0, 1.7, 0, steel);
-  box(1.2, 2.2, 1.2, 0, 4.5, 0, materials.danger);
+  box(0.9, 1.6, 0.9, 0, 4.2, 0, materials.hairline);
 
   // Site A (west): gantry platform, stacked crates, a container to plant behind.
   box(6, 0.5, 4, -20, 0.25, -10, materials.surface);
@@ -97,9 +97,9 @@ export function createWorld(scene) {
   const siteB = siteMarker(21, 11, 0x7fb3d5, 'B');
 
   // Light: low amber sun from the west, cool dusk fill from the east, warm hemisphere.
-  const sky = new THREE.HemisphereLight(new THREE.Color(0x8a6a4a), new THREE.Color(PALETTE.canvas), 0.9);
+  const sky = new THREE.HemisphereLight(new THREE.Color(0x8a6a4a), new THREE.Color(PALETTE.canvas), 1.25);
   scene.add(sky);
-  const sun = new THREE.DirectionalLight(new THREE.Color(0xffb35c), 2.4);
+  const sun = new THREE.DirectionalLight(new THREE.Color(0xffb35c), 2.9);
   sun.position.set(-18, 12, 6);
   sun.target.position.set(4, 0, -2);
   sun.castShadow = true;
